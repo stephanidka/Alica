@@ -1,0 +1,93 @@
+li {
+	list-style: none; list-style-type: none;
+    }
+body {
+    font: 14px 'futura';
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative; 
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: white; 
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    background-color: white;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 37px;
+    left: 0;
+    background-color: white; /* цвет под буквами */
+    border: 1px solid white;
+}
+ul.submenu > li {
+    display: block;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+
+            height: auto;
+}
+ 
+#header {
+            background: white;
+            height: 50px;
+            width: auto;
+}
+ 
+#navigation {
+            background: white;
+            width: auto;
+            height: 20px;
+}
+ 
+
+ 
+#content {
+            background: white;
+            width: auto;
+            height: 100%;
+}
+ 
+#clear {
+            clear:both;
+}
+ 
+#footer {
+            background: green;
+            height: 30px;
+            width: auto;
+}
