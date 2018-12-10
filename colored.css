@@ -139,7 +139,7 @@ ul.menu > li:hover > ul.submenu {
   right: 0;
   bottom: 0;
   z-index: 30;
-  background: rgba(240,240,240,.9);
+  background: black;
   cursor: zoom-out;
 }
 
