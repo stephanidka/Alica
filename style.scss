@@ -1,0 +1,160 @@
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+#header {
+    background: white;
+    width: 100vh ;
+
+    #name {
+        color: red;
+    }
+}
+
+#navigation {
+    background: white;
+    width: auto;
+}
+
+
+
+#content {
+    background: white;
+    width: auto;
+    height: auto;
+}
+
+#clear {
+    clear:both;
+}
+
+#footer {
+    background: white;
+    height: 30px;
+    width: auto;
+}
+
+ul {
+display: block;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+ul:after {
+display: block;
+content: ' ';
+clear: both;
+float: none;
+}
+ul.menu > li {
+float: left;
+position: relative; 
+
+}
+ul.menu > li > a {
+display: block;
+padding: 10px;
+color: black;
+background-color: white; 
+text-decoration: none;
+}
+ul.menu > li > a:hover {
+background-color: white;
+}
+ul.submenu {
+display: none;
+position: absolute;
+width: 150px;
+top: 37px;
+left: 0;
+background-color: white; 
+border: 1px solid white;
+z-index:500;
+}
+ul.submenu > li {
+display: block;
+}
+ul.submenu > li > a {
+display: block;
+padding: 10px;
+color: white;
+background-color: black;
+text-decoration: none;
+}
+ul.submenu > li > a:hover {
+text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+display: block;
+}
+
+#gallery1 {
+position: relative;
+padding-top: 50%;
+-moz-user-select: none; user-select: none;
+}
+
+
+#gallery1 img {
+position: absolute;
+top: 25%;
+left: 12.5%;
+max-width: 24.5%;
+max-height: 49.5%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+-moz-user-select: none; user-select: none;
+cursor: zoom-in;
+}
+#gallery1 img:nth-child(4n-2) {left: 37.5%;}
+#gallery1 img:nth-child(4n-1) {left: 62.5%;}
+#gallery1 img:nth-child(4n) {left: 87.5%;}
+#gallery1 img:nth-child(n+5) {top: 75%;}
+
+#gallery1 img:focus {
+position: fixed;
+top: 50%;
+left: 50%;
+z-index: 31;
+max-width: 100%;
+max-height: 100%;
+outline: none;
+pointer-events: none;
+}
+
+#gallery1 img:focus ~ div {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 30;
+background: black;
+cursor: zoom-out;
+}
+
+a { 
+text-decoration: none; 
+} 
