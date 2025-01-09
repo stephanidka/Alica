@@ -5,8 +5,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: black;
-
+    background: #E7E7E7;
+    background-image: url("ein_zuhause_finden/hexen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #000000;
     margin: 0;
     padding: 0;
@@ -16,44 +18,91 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
+    // justify-content: center;
     background: white;
     margin: auto;
     width: auto;
-    height: auto;
-}
+    height: 100vh;
 
-#header {
-    background: white;
-    width: 100vh ;
-
-    #name {
-        color: red;
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        width: 100vh ;
+    
+        #name {
+            color: black;
+        }
+    
+        #navigation {
+            background: white;
+            width: auto;
+        }
     }
+    
+    #content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        flex-grow: 1;
+
+    .subscribtion_top{
+        width: 90vh;
+        height: auto; /* Автоматическая высота, чтобы текст умещался */
+        margin-bottom: 10px; /* Отступ от нижнего края */
+        text-align: left; /* Выравнивание текста по центру */
+        font-size: 16px; /* Размер текста */
+        }  
+
+    .content_container {
+        width: 100%; /* Контейнер занимает всю ширину */
+        max-width: 800px; /* Максимальная ширина */
+        aspect-ratio: 16/9; /* Пропорции видео (ширина/высота) */
+        position: relative; /* Для iframe */
+        }    
+    iframe{
+        width: 100%; /* Видео занимает всю ширину контейнера */
+        height: 100%; /* Видео растягивается на всю высоту контейнера */
+        border: none; /* Убираем границы */
+        position: absolute; /* Абсолютное позиционирование внутри контейнера */
+        
+        }
+    .subscribtion_boddom{
+        width: 90vh;
+        height: auto; /* Автоматическая высота, чтобы текст умещался */
+        margin-bottom: 10px; /* Отступ от нижнего края */
+        text-align: left; /* Выравнивание текста по центру */
+        font-size: 16px; /* Размер текста */
+        }  
+        .content_container_table {
+            width: 100%; /* Контейнер занимает всю ширину */
+            max-width: 800px; /* Максимальная ширина */
+            height: 100%;
+
+    }
+    
+
 }
-
-#navigation {
-    background: white;
-    width: auto;
-}
-
-
-
-#content {
-    background: white;
-    width: auto;
-    height: auto;
-}
-
-#clear {
-    clear:both;
-}
-
 #footer {
-    background: white;
-    height: 30px;
-    width: auto;
+    flex-shrink: 0;
+    background-color: white;
+    color: black;
+    width: 100vh;
+    text-align: center;
 }
+}
+
+
+// #clear {
+//     clear:both;
+// }
+
+
 
 ul {
 display: block;

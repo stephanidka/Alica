@@ -1,8 +1,12 @@
+@charset "UTF-8";
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: black;
+  background: #E7E7E7;
+  background-image: url("ein_zuhause_finden/hexen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -11,40 +15,71 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: white;
   margin: auto;
   width: auto;
-  height: auto;
+  height: 100vh;
 }
-
-#header {
+#container #header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: white;
   width: 100vh;
 }
-#header #name {
-  color: red;
+#container #header #name {
+  color: black;
 }
-
-#navigation {
+#container #header #navigation {
   background: white;
   width: auto;
 }
-
-#content {
+#container #content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: white;
-  width: auto;
-  height: auto;
+  flex-grow: 1;
 }
-
-#clear {
-  clear: both;
+#container #content .subscribtion_top {
+  width: 90vh;
+  height: auto; /* Автоматическая высота, чтобы текст умещался */
+  margin-bottom: 10px; /* Отступ от нижнего края */
+  text-align: left; /* Выравнивание текста по центру */
+  font-size: 16px; /* Размер текста */
 }
-
-#footer {
-  background: white;
-  height: 30px;
-  width: auto;
+#container #content .content_container {
+  width: 100%; /* Контейнер занимает всю ширину */
+  max-width: 800px; /* Максимальная ширина */
+  aspect-ratio: 16/9; /* Пропорции видео (ширина/высота) */
+  position: relative; /* Для iframe */
+}
+#container #content iframe {
+  width: 100%; /* Видео занимает всю ширину контейнера */
+  height: 100%; /* Видео растягивается на всю высоту контейнера */
+  border: none; /* Убираем границы */
+  position: absolute; /* Абсолютное позиционирование внутри контейнера */
+}
+#container #content .subscribtion_boddom {
+  width: 90vh;
+  height: auto; /* Автоматическая высота, чтобы текст умещался */
+  margin-bottom: 10px; /* Отступ от нижнего края */
+  text-align: left; /* Выравнивание текста по центру */
+  font-size: 16px; /* Размер текста */
+}
+#container #content .content_container_table {
+  width: 100%; /* Контейнер занимает всю ширину */
+  max-width: 800px; /* Максимальная ширина */
+  height: 100%;
+}
+#container #footer {
+  flex-shrink: 0;
+  background-color: white;
+  color: black;
+  width: 100vh;
+  text-align: center;
 }
 
 ul {
