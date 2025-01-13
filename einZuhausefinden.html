@@ -3,10 +3,10 @@
 	<title> ein Zuhausefinden </title>
 <link rel="stylesheet" href="style.css">
 </head>
-
+<body>
 <div id="container">
 	<div id="header">
-		<div id="name"><h1>alica khaet</h1></div>
+		<div id="name"><h1><a href="index.html">Alica Khaet</a></h1></div>
 		<div id="navigation">
 			<ul class="menu">
 				<li><a href="animation.html">animation</a></li>
@@ -37,23 +37,30 @@
 		<img src="ein_zuhause_finden\hozyaka.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\hozyaka.jpg" class="preview"/>
 		<img src="ein_zuhause_finden\kover.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\kover.jpg" class="preview"/>
 		<img src="ein_zuhause_finden\kreis.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\kreis.jpg" class="preview"/>
-		<img src="ein_zuhause_finden\schleich-dich.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\schleich-dich.jpg" class="preview"/>
-		<img src="ein_zuhause_finden\schwere-leichte.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\schwere-leichte.jpg" class="preview"/>
-		<img src="ein_zuhause_finden\sisters.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\sisters.jpg" class="preview"/>
-		<img src="ein_zuhause_finden\take-me.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\take-me.jpg" class="preview"/>
-		<img src="ein_zuhause_finden\take-me2.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\take-me2.jpg" class="preview"/>  
-		<img src="ein_zuhause_finden\vyhod.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein zuhause finden\vyhod.jpg" class="preview"/>  
+		<img src="ein_zuhause_finden\schleich-dich.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\schleich-dich.jpg" class="preview"/>
+		<img src="ein_zuhause_finden\schwere-leichte.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\schwere-leichte.jpg" class="preview"/>
+		<img src="ein_zuhause_finden\sisters.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\sisters.jpg" class="preview"/>
+		<img src="ein_zuhause_finden\take-me.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\take-me.jpg" class="preview"/>
+		<img src="ein_zuhause_finden\take-me2.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\take-me2.jpg" class="preview"/>  
+		<img src="ein_zuhause_finden\vyhod.jpg" alt="Aica Khaet; ein Zuhause Finden" data-full="ein_zuhause_finden\vyhod.jpg" class="preview"/>  
 
 </div>
 	
 	</div>
-		 					   
-	<div id="footer">
-	<p >Halle 2018</p>
+	  <!-- Модальное окно -->
+	  <div id="modal" class="modal hidden">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <img id="modal-image" src="" alt="Full-size image">
+		  <button id="prev">❮</button>
+		  <button id="next">❯</button>
+		</div>
+	  </div>
+							   
+	  <div id="footer">
+		<p id="currientYear"></p>
 	</div>
 </div>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>

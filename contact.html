@@ -2,20 +2,10 @@
 <head><title> contact </title>
 <link rel="stylesheet" href="style.css">
 </head>
-<style>
-#content {
-            background: white;
-            width: auto;
-            height: 100%;
-}
-</style>
-<body style= "background:black" link="black" vlink="black" alink="gray" height= 100vh>
-<div style="margin: 0 20%; background:white" >
-
 
 <div id="container">
 	<div id="header">
-		<div id="name"><h1>alica khaet</h1></div>
+		<div id="name"><h1><a href="index.html">Alica Khaet</a></h1></div>
 		<div id="navigation">
 			<ul class="menu">
 				<li><a href="animation.html">animation</a></li>
@@ -34,7 +24,7 @@
 		
 		 
 	<div id="content">
-	<h1 align=center>contact</h1>
+	<h1>contact</h1>
 <p align=center><b>Impressum:</b></p>
 <p align=center>Alica Khaet</p>
 <p align=center>Willy-Lohmann-Str. 8</p>	
@@ -47,16 +37,19 @@
 
 	</div>
 		 
-	<div id="clear">
+	<form action="subscribe" method="post">
+		<label for="email">Подпишитесь на нашу рассылку:</label>
+		<input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+		<button type="submit">Подписаться</button>
+	  </form>
 		 
 	</div>
 							   
 	<div id="footer">
-	<p  align=center>Halle 2018</p>
+		<p id="currientYear"></p>
 	</div>
 </div>
 
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
