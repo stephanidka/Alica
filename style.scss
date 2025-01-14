@@ -11,7 +11,14 @@ body {
     margin: 0;
     padding: 0; 
 }
-
+.custom-hr {
+    border: none;       /* Убираем стандартные рамки */
+    height: 2px;        /* Толщина линии */
+    background-color: rgb(30, 30, 30); /* Цвет линии */
+    margin: 20px 0;     /* Отступы сверху и снизу */
+    display: block;
+  }
+  
 h1{
         font-family:  "Faustina", serif;
         font-style: normal;
@@ -80,11 +87,17 @@ h1{
         }  
         .content_container_table {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             height: 100%;
 
     }
-    
+.content_container_poster{
+    width: 100vh;
+    max-width: 600px;
+    img{
+        max-width: 600px;
+    }
+}   
 
 }
 #footer {
@@ -161,7 +174,7 @@ h1{
     border: none;
   }
   
-  button {
+  .galleryButton {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -236,10 +249,14 @@ ul.menu > li:hover > ul.submenu {
 display: block;
 }
 
-
-
 a { 
 text-decoration: none; 
 color: #000000;
     &:hover{color: gray}
 } 
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
