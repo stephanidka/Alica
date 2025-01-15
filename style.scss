@@ -11,18 +11,26 @@ body {
     margin: 0;
     padding: 0; 
 }
-.custom-hr {
-    border: none;       /* Убираем стандартные рамки */
-    height: 2px;        /* Толщина линии */
-    background-color: rgb(30, 30, 30); /* Цвет линии */
-    margin: 20px 0;     /* Отступы сверху и снизу */
+.link {
+    position: relative;
+  }
+  .link::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
     display: block;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    width: 0;
+    transition: 0.3s;
+  }
+  .link:hover:after {
+    width: 100%;
   }
   
-h1{
-        font-family:  "Faustina", serif;
-        font-style: normal;
-}
 #container {
     display: flex;
     flex-direction: column;
@@ -194,56 +202,95 @@ h1{
   }
 
   // drop menu
-ul {
-display: block;
-margin: 0;
-padding: 0;
-list-style: none;
-}
-ul:after {
-display: block;
-content: ' ';
-clear: both;
-float: none;
-}
-ul.menu > li {
-float: left;
-position: relative; 
-
-}
-ul.menu > li > a {
-display: block;
-padding: 10px;
-color: black;
-background-color: white; 
-text-decoration: none;
-}
-ul.menu > li > a:hover {
-background-color: white;
-}
-ul.submenu {
-display: none;
-position: absolute;
-width: 150px;
-top: 37px;
-left: 0;
-background-color: white; 
-border: 1px solid white;
-z-index:500;
-}
-ul.submenu > li {
-display: block;
-}
-ul.submenu > li > a {
-display: block;
-padding: 10px;
-color: white;
-background-color: black;
-text-decoration: none;
-}
-ul.submenu > li > a:hover {
-text-decoration: underline;
-}
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+  }
+  
+  ul.menu > li {
+    float: left;
+    position: relative;
+  }
+  
+  ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    position: relative; /* Позиционирование для псевдоэлемента */
+  }
+  
+  ul.menu > li > a:hover {
+    background-color: white;
+  }
+  
+  ul.menu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0; /* Начальная ширина 0 */
+    background-color: black;
+    transition: width 0.3s ease; /* Анимация расширения */
+  }
+  
+  ul.menu > li > a:hover::after {
+    width: 100%; /* При наведении ширина увеличивается */
+  }
+  
+  ul.submenu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 37px;
+    left: 0;
+    background-color: white;
+    border: 1px solid white;
+    z-index: 500;
+  }
+  
+  ul.submenu > li {
+    display: block;
+  }
+  
+  ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    position: relative; /* Чтобы псевдоэлемент ::after правильно позиционировался */
+  }
+  
+  ul.submenu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0;
+    background-color: white; /* Белое подчеркивание */
+    transition: width 0.3s ease;
+  }
+  
+  ul.submenu > li > a:hover::after {
+    width: 100%;
+  }
+  // ul.submenu > li > a:hover {
+//     width: 100%;;
+// }
 
 ul.menu > li:hover > ul.submenu {
 display: block;
@@ -256,7 +303,67 @@ color: #000000;
 } 
 
 form{
+    background-color: #161616;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
+.form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+        label{
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        input{
+            margin: 5px;
+            width: 90%; /* Ширина инпута - занимает всю ширину контейнера */
+            max-width: 400px; /* Максимальная ширина для ограничения */
+            padding: 10px; /* Внутренние отступы */
+            font-size: 14px; /* Размер текста */
+            border: 1px solid #ccc; /* Светло-серая рамка */
+            border-radius: 2px; /* Скруглённые углы */
+            background-color: white; /* Белый фон */
+            color: #333; /* Цвет текста */
+        }
+
+        button {
+            width: 50%;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #070707;
+            text-decoration: none;
+            border-radius: 2px;
+          
+          
+          &:hover {
+            background-color: #363636;
+            color: white;
+    
+          }}
+   
+}
+
+.vitaBtn {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        background-color: #070707;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 2px;
+      
+      
+      &:hover {
+        background-color: #363636;
+        color: white;
+
+      }}
