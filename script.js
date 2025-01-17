@@ -10,6 +10,7 @@ const currientYear = document.getElementById('currientYear')
     currientYear.textContent = "Halle, " + new Date().getFullYear() + " ♥";
     console.log("idite nahui")
 
+// gallery
 let currentIndex = 0;
 
 // Открытие модального окна
@@ -23,11 +24,16 @@ thumbnails.forEach((thumbnail, index) => {
 function openModal(imageSrc) {
   modal.classList.remove('hidden');
   modalImage.src = imageSrc;
+
+  document.addEventListener('keydown', handleKeyPress);
 }
+
 
 // Закрытие модального окна
 closeModal.addEventListener('click', () => {
   modal.classList.add('hidden');
+
+  document.removeEventListener('keydown', handleKeyPress);
 });
 
 modal.addEventListener('click', (e) => {
@@ -50,5 +56,15 @@ function showNext() {
   modalImage.src = thumbnails[currentIndex].dataset.full;
 }
 
+// Обработчик нажатий клавиш
+function handleKeyPress(event) {
+  if (event.key === 'ArrowLeft') {
+    showPrev(); // Переключение на предыдущее изображение
+  } else if (event.key === 'ArrowRight') {
+    showNext(); // Переключение на следующее изображение
+  } else if (event.key === 'Escape') {
+    closeGallery(); // Закрытие галереи
+  }
+}
 
 

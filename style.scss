@@ -114,6 +114,30 @@ body {
     color: black;
     width: 100vh;
     text-align: center;
+
+    .sociallinks{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+
+      .fb{
+        margin-left: 20px;
+      }
+      .ig{
+        margin-right: 20px;
+      }
+    }
+    .halle{
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .line{
+      height: 1px; 
+      background-color: black; 
+      margin: 40px 0;
+    }
 }
 }
  // gallery
@@ -128,8 +152,8 @@ body {
   }
 
   .preview {
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 200px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s ease;

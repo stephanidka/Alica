@@ -110,6 +110,28 @@ body {
   width: 100vh;
   text-align: center;
 }
+#container #footer .sociallinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#container #footer .sociallinks .fb {
+  margin-left: 20px;
+}
+#container #footer .sociallinks .ig {
+  margin-right: 20px;
+}
+#container #footer .halle {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#container #footer .line {
+  height: 1px;
+  background-color: black;
+  margin: 40px 0;
+}
 
 #gallery {
   display: flex;
@@ -121,8 +143,8 @@ body {
 }
 
 .preview {
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
