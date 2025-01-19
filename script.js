@@ -43,8 +43,6 @@ modal.addEventListener('click', (e) => {
 });
 
 // Переключение изображений
-prevButton.addEventListener('click', showPrev);
-nextButton.addEventListener('click', showNext);
 
 function showPrev() {
   currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
@@ -55,6 +53,9 @@ function showNext() {
   currentIndex = (currentIndex + 1) % thumbnails.length;
   modalImage.src = thumbnails[currentIndex].dataset.full;
 }
+
+prevButton.addEventListener('click', showPrev);
+nextButton.addEventListener('click', showNext);
 
 // Обработчик нажатий клавиш
 function handleKeyPress(event) {

@@ -10,7 +10,9 @@ body {
     color: #000000;
     margin: 0;
     padding: 0; 
-}
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    letter-spacing: 1px;
+    }
 .link {
     position: relative;
   }
@@ -55,6 +57,10 @@ body {
             background: white;
             width: auto;
         }
+        #logo{
+          width: 15%;
+          padding-top: 20px;
+        }
     }
     
     #content {
@@ -71,6 +77,7 @@ body {
         margin-bottom: 10px; 
         text-align: left;
         font-size: 16px;
+        letter-spacing: 2px;
         }  
 
     .content_container {
@@ -91,12 +98,14 @@ body {
         height: auto; /* Автоматическая высота, чтобы текст умещался */
         margin-bottom: 10px; /* Отступ от нижнего края */
         text-align: left; /* Выравнивание текста по центру */
-        font-size: 16px; /* Размер текста */
+        font-size: small; /* Размер текста */
+        color: #363636;
         }  
-        .content_container_table {
+      .content_container_table {
             width: 100%;
             max-width: 600px;
             height: 100%;
+            font-size: small;
 
     }
 .content_container_poster{
@@ -184,6 +193,10 @@ body {
   
   .modal-content {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
     max-width: 90%;
     max-height: 90%;
   }
@@ -200,10 +213,11 @@ body {
     top: 10px;
     right: 10px;
     font-size: 24px;
-    color: white;
+    color: rgb(159, 156, 156);
     cursor: pointer;
     background: none;
     border: none;
+    opacity: 50%;
   }
   
   .galleryButton {
@@ -215,6 +229,11 @@ body {
     color: white;
     font-size: 36px;
     cursor: pointer;
+    opacity: 50%;
+    transition: color 0.3s;
+    &:hover{
+      color: grey;
+    }
   }
   
   #prev {
@@ -231,6 +250,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    letter-spacing: 3px;
   }
   
   ul:after {
@@ -246,8 +266,8 @@ body {
   
   ul.menu > li > a {
     display: block;
-    padding: 10px;
     color: black;
+    padding: 15px;
     background-color: white;
     text-decoration: none;
     position: relative; /* Позиционирование для псевдоэлемента */
@@ -295,6 +315,7 @@ body {
     background-color: black;
     text-decoration: none;
     position: relative; /* Чтобы псевдоэлемент ::after правильно позиционировался */
+    font-size: small;
   }
   
   ul.submenu > li > a::after {
