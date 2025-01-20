@@ -36,6 +36,11 @@ body {
   width: 100%;
 }
 
+#logo {
+  width: 50%;
+  padding-top: 20px;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -58,10 +63,6 @@ body {
 #container #header #navigation {
   background: white;
   width: auto;
-}
-#container #header #logo {
-  width: 15%;
-  padding-top: 20px;
 }
 #container #content {
   display: flex;
@@ -104,6 +105,17 @@ body {
   max-width: 600px;
   height: 100%;
   font-size: small;
+}
+#container #content .content_container_impressum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-left: 50px;
+  text-align: left;
+}
+#container #content .content_container_impressum h3 {
+  letter-spacing: 2px;
 }
 #container #content .content_container_poster {
   width: 100vh;

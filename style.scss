@@ -32,7 +32,11 @@ body {
   .link:hover:after {
     width: 100%;
   }
-  
+
+  #logo{
+    width: 50%;
+    padding-top: 20px;
+  }
 #container {
     display: flex;
     flex-direction: column;
@@ -57,10 +61,7 @@ body {
             background: white;
             width: auto;
         }
-        #logo{
-          width: 15%;
-          padding-top: 20px;
-        }
+
     }
     
     #content {
@@ -106,7 +107,18 @@ body {
             max-width: 600px;
             height: 100%;
             font-size: small;
-
+    }
+    .content_container_impressum{
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-left: 50px;
+      text-align: left;
+      h3{
+        letter-spacing: 2px;
+      }
     }
 .content_container_poster{
     width: 100vh;
@@ -341,7 +353,7 @@ ul.menu > li:hover > ul.submenu {
 display: block;
 }
 
-a { 
+a{ 
 text-decoration: none; 
 color: #000000;
     &:hover{color: gray}
