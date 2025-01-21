@@ -33,10 +33,15 @@ body {
     width: 100%;
   }
 
-  #logo{
-    width: 50%;
+  #logo-container {
+    display: inline-block; /* Убедиться, что контейнер сохраняет размеры */
+}
+
+#logo-container img {
+    width: 150px; /* Или конкретная ширина */
+    height: auto;
     padding-top: 20px;
-  }
+}
 #container {
     display: flex;
     flex-direction: column;
@@ -60,6 +65,9 @@ body {
         #navigation {
             background: white;
             width: auto;
+        }
+        a {
+          display: block; /* Убедиться, что ссылка ведет себя как блок */
         }
 
     }
